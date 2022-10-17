@@ -19,9 +19,9 @@ a {
     display: inline-block;
     color: inherit;
     cursor: pointer;
-    padding: .1em 0 .03em 0;
-    margin-top: 1em;
-    border-bottom: 1px solid var(--black);
+    /*padding: .1em 0 .03em 0;*/
+    /*margin-top: 1em;*/
+    /*border-bottom: 1px solid var(--black);*/
 }
 h2 {
     font-size: var(--fs-s);
@@ -51,13 +51,12 @@ body {
 }
 .logo {
     max-width: 580px;
-    margin: var(--l) auto 0 auto;
+    margin: var(--l) auto;
     display: flex;
     align-items: center;
 }
 .logo > img {
-
-    width: 34px;
+    width: 31px;
 }
 .logo > strong {
     font-size: 18px;
@@ -69,14 +68,14 @@ body {
     max-width: 580px;
     display: grid;
     grid-auto-rows: min-content auto;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(40px, 1fr));
     grid-column-gap: var(--s);
-    grid-row-gap: var(--l);
+    grid-row-gap: var(--s);
     margin: var(--s) auto;
 }
 .collection > img {
-    width: 150px;
-    height: 150px;
+    width: 40px;
+    height: 40px;
     outline: 1px solid var(--black);
 }
 .scroll-snap {

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Title</title>
+    <link href="style.css" rel="stylesheet">
+</head>
+<body>
+    <div class="wallpaper ps" id="app">
+        <div class="main scroll-snap">
+            <img src="dino.png" class="perceive">
+        </div>
+        <div class="experience scroll-snap">
+            <h2>
+                Кликайте, чтобы создать оригинальную композицию
+            </h2>
+            <div>
+                <table class="canvas"></table>
+            </div>
+            <a class="active-version">Показать версию автора</a>
+            <div class="version">
+                <div>
+                    <table class="canvas-author"></table>
+                </div>
+                <a href="pictures.html">Перейти к коллекции</a>
+            </div>
+            <nav class="scroll-snap">
+                <a href="index.html" class="active-link">Perceive</a>
+                <a href="pictures.html">Pictures</a>
+                <a>Books</a>
+                <a>About</a>
+            </nav>
+        </div>
+    </div>
+<script>
+    const perceive = document.querySelector('.perceive')
+    const wallpaper = document.querySelector('.wallpaper')
+    const experience = document.querySelector('.experience')
+    const canvas = document.querySelector('.canvas')
+    const canvasAuthor = document.querySelector('.canvas-author')
+    const activeVersion = document.querySelector('.active-version')
+    const version = document.querySelector('.version')
+    wallpaper.onscroll = () => {
+
+        const h = document.body.clientHeight
+        const t = wallpaper.scrollTop
+        perceive.style.opacity = 1 - Math.sin(((t*1.5) * 200 / h  * 0.01))
+        t + 60 > h ? experience.classList.add('show') : experience.classList.remove('show')
+    }
+    // perceive.onclick = () => {
+    //     wallpaper.scrollTo({
+    //         top: document.body.clientHeight,
+    //         behavior: 'smooth'
+    //     })
+    // }
+    function render(v) {
+        let tbody = ''
+        let i = 0
+        for (let y = 0; y < 2; y++) {
+            tbody += '<tr>'
+            for (let x  =0; x < 3; x++) {
+                tbody += v && v[i] === '1' ? '<td class="active"></td>': '<td></td>'
+                i++
+            }
+            tbody += '</tr>'
+        }
+        return tbody
+    }
+    canvas.innerHTML = render()
+    canvasAuthor.innerHTML = render('101110')
+    canvas.onclick = (event) => {
+        event.target.closest('td') && event.target.classList.toggle('active')
+        activeVersion.classList.add('show')
+    }
+    activeVersion.onclick = () => {
+        version.classList.add('show')
+    }
+</script>
+</body>
+</html>
