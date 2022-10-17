@@ -9,9 +9,6 @@
 <body>
     <div class="pictures ps">
         <a href="index.html" class="logo"><img src="logo.svg"><strong>Sasha Kosyak</strong></a>
-<!--        <h2><strong>Perceive collection</strong> состоит из 14 картин.-->
-<!--            Оригинальные фото картин появятся после завршения выставок.-->
-<!--        </h2>-->
         <div class="collection">
             <img src="pictures/1.svg">
             <img src="pictures/2.svg">
@@ -28,7 +25,33 @@
             <img src="pictures/13.svg">
             <img src="pictures/14.svg">
         </div>
-        <h2>По всем вопросам и предложениям обращайтесь по электронной почте <strong>akosyak@protonmail.com</strong></h2>
+        <div class="text">
+            <p>В раннем детстве я был восхищен динозаврами. Я не понимал какова причина этого восхищения, что это за явление. Намного позже я узнал, что это явление называется эстетикой. Почему же динозавры показались мне такими эстетичными?</p>
+            <p>Все виды смотрелись целостно, но при этом каждый обладал уникальными качествами. Оптимальными для эффективного выживания в своей среде.</p>
+            <p>Эстетику можно определить, как чувство необходимого достаточного.</p>
+            <p>Я задался новым вопросом, а каким будет необходимое достаточное, для выражения самого этого чувства?</p>
+            <p>Выразить эстетику я решил в форме коллекции картин. Два цвета черный и белый. Не более двух объектов на холсте. Выбранные правила отношения объектов между собой и краями полотна дают четырнадцать возможный вариантов. Объекты располагаются по сетке 5X5, что позволило избежать излишней вариативности их размеров.</p>
+            <p>По всем вопросам и предложениям обращайтесь по электронной почте <strong>akosyak@protonmail.com</strong></p>
+        </div>
     </div>
+    <div class="popup">
+        <div class="topBar">
+            <button class="close"><img src="close.svg"></button>
+        </div>
+        <div class="picture">Извините, фото картин появятся позже.</div>
+    </div>
+    <script>
+        const collection = document.querySelector('.collection')
+        const popup = document.querySelector('.popup')
+        const close = document.querySelector('.close')
+
+        collection.onclick = () => {
+          popup.classList.add('popup__show')
+        }
+        close.onclick = () => {
+          popup.classList.remove('popup__show')
+        }
+
+    </script>
 </body>
 </html>
