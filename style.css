@@ -8,6 +8,9 @@
 
 :root {
     --fs-s: 15px;
+    --fs-m: 18px;
+    --fs-l: 22px;
+    --xxs: 10px;
     --xs: 20px;
     --s: 30px;
     --m: 50px;
@@ -24,12 +27,21 @@ a {
     /*margin-top: 1em;*/
     /*border-bottom: 1px solid var(--black);*/
 }
-.text {
+.wallpaper {
+    overflow-y: scroll;
+    scroll-snap-type: y proximity;
+    height: 100vh;
+    position: relative;
+}
+main {
     font-size: var(--fs-s);
     font-weight: 300;
     padding: var(--s) 0 var(--l) 0;
     margin: 0 auto;
-    max-width: 580px;
+    max-width: 600px;
+}
+img {
+    width: 100%;
 }
 .active-link {
     border-bottom: 0;
@@ -48,37 +60,45 @@ button {
     background: transparent;
 }
 .ps {
-    padding: 0 20px;
+    padding: 0 var(--xs);
 }
-.wallpaper {
-    height: 100vh;
-    overflow-y: scroll;
-    scroll-snap-type: y proximity;
-    position: relative;
+h2 {
+    font-size: var(--fs-l);
+    margin: 0;
+    margin-bottom: var(--m);
+    letter-spacing: -.02em;
+}
+p {
+    margin: var(--m) 0;
+}
+.label {
+    text-align: right;
+}
+.block {
+    margin-bottom: var(--l);
 }
 .logo {
-    max-width: 580px;
-    margin: var(--l) auto;
+    margin-top: var(--l);
+    padding-bottom: var(--s);
     display: flex;
     align-items: center;
 }
-.logo > img {
-    width: 31px;
+.logo2 {
+    width: 28px;
+    margin-right: 13px;
 }
 .logo > strong {
-    font-size: 18px;
-    margin-left: 13px;
+    font-size: var(--fs-m);
     letter-spacing: -0.02em;
     font-weight: 700;
 }
 .collection {
-    max-width: 580px;
     display: grid;
     grid-auto-rows: min-content auto;
     grid-template-columns: repeat(auto-fit, minmax(40px, 1fr));
     grid-column-gap: var(--s);
     grid-row-gap: var(--s);
-    margin: var(--s) auto;
+    padding: var(--xs) 0;
 }
 .collection > img {
     width: 40px;
@@ -86,8 +106,6 @@ button {
     outline: 1px solid var(--black);
     cursor: pointer;
 }
-
-
 
 
 .main {

@@ -7,32 +7,53 @@
     <link href="style.css" rel="stylesheet">
 </head>
 <body>
-    <div class="pictures ps">
-        <a href="index.html" class="logo"><img src="logo.svg"><strong>Sasha Kosyak</strong></a>
-        <div class="collection">
-            <img src="pictures/1.svg">
-            <img src="pictures/2.svg">
-            <img src="pictures/3.svg">
-            <img src="pictures/4.svg">
-            <img src="pictures/5.svg">
-            <img src="pictures/6.svg">
-            <img src="pictures/7.svg">
-            <img src="pictures/8.svg">
-            <img src="pictures/9.svg">
-            <img src="pictures/10.svg">
-            <img src="pictures/11.svg">
-            <img src="pictures/12.svg">
-            <img src="pictures/13.svg">
-            <img src="pictures/14.svg">
+    <div class="wallpaper ps">
+        <main>
+        <div class="block">
+            <div class="logo"><strong>Sasha Kosyak</strong></div>
+
+        <p>Главным инструментом творчества является эстетика. <strong>Эстетика - это необходимое достаточное для выражения идеи</strong>. В своих работах я старался придерживаться этого принципа.</p>
         </div>
-        <div class="text">
-            <p>В раннем детстве я был восхищен динозаврами. Я не понимал какова причина этого восхищения, что это за явление. Намного позже я узнал, что это явление называется эстетикой. Почему же динозавры показались мне такими эстетичными?</p>
-            <p>Все виды смотрелись целостно, но при этом каждый обладал уникальными качествами. Оптимальными для эффективного выживания в своей среде.</p>
-            <p>Эстетику можно определить, как чувство необходимого достаточного.</p>
-            <p>Я задался новым вопросом, а каким будет необходимое достаточное, для выражения самого этого чувства?</p>
-            <p>Выразить эстетику я решил в форме коллекции картин. Два цвета черный и белый. Не более двух объектов на холсте. Выбранные правила отношения объектов между собой и краями полотна дают четырнадцать возможный вариантов. Объекты располагаются по сетке 5X5, что позволило избежать излишней вариативности их размеров.</p>
-            <p>По всем вопросам и предложениям обращайтесь по электронной почте <strong>akosyak@protonmail.com</strong></p>
+        <div class="block">
+            <h2>Инсталляция</h2>
+            <div class="img-group">
+                <img src="perceive.svg">
+                <img src="perceive.jpg">
+            </div>
+            <div class="label"><strong>"Perceive" | Ощущай</strong></div>
+
+            <p>Инсталляция представлена трех метровой конструкции в виде куба. Уголки из нержавеющей стали покрыты специальной светоотражающей краской.
+                Отдельный источник света делает акцент на рамках, которые никак не ограничивают воздух внутри арт-объекта. Данная работа служит напоминанием, что мы по своей сути всегда свободны, а ограничения условны.
+            </p>
         </div>
+        <div class="block">
+            <h2>Коллекция</h2>
+            <div class="collection">
+                <img src="pictures/1.svg">
+                <img src="pictures/2.svg">
+                <img src="pictures/3.svg">
+                <img src="pictures/4.svg">
+                <img src="pictures/5.svg">
+                <img src="pictures/6.svg">
+                <img src="pictures/7.svg">
+                <img src="pictures/8.svg">
+                <img src="pictures/9.svg">
+                <img src="pictures/10.svg">
+                <img src="pictures/11.svg">
+                <img src="pictures/12.svg">
+                <img src="pictures/13.svg">
+                <img src="pictures/14.svg">
+            </div>
+            <div class="label"><strong>14 pictures</strong></div>
+            <p>В раннем детстве я был восхищен динозаврами. Я не понимал какова причина этого восхищения. Все виды смотрелись целостно, но при этом каждый обладал уникальными качествами, оптимальными для эффективного выживания в своей среде.
+            </p>
+            <img src="dino.svg">
+            <p>Как и с динозаврами, каждая картина из коллекции самодостаточна, но только при рассмотрении их как целого, можно увидеть систему. В данных работах я постарался максимально передать это чувство неотделимости всего индивидуального от целого.</p>
+        </div>
+        <div class="block">
+            <p>По всем вопросам и предложениям обращайтесь по электронной почте <strong>sashakosyak@yahoo.com</strong></p>
+        </div>
+        </main>
     </div>
     <div class="popup">
         <div class="topBar">
@@ -44,6 +65,7 @@
         const collection = document.querySelector('.collection')
         const popup = document.querySelector('.popup')
         const close = document.querySelector('.close')
+
 
         collection.onclick = () => {
           popup.classList.add('popup__show')
