@@ -10,25 +10,31 @@
 <body>
 <div class="wallpaper ps">
     <main>
-        <div class="block">
-            <div class="logo"><strong>Sasha Kosyak</strong></div>
-
-            <p>Главным инструментом творчества является эстетика. <strong>Эстетика - это необходимое достаточное для выражения идеи</strong>. В своих работах я старался придерживаться этого принципа.</p>
+        <div class="block start">
+            <div class="logo"><img src="logo.svg"><strong>Sasha Kosyak</strong></div>
+            <p>Эстетика является выражением баланса. Ничего лишнего, и все необходимое.</p>
         </div>
-        <div class="block">
+        <div class="block scroll-snap">
             <h2>Инсталляция</h2>
             <div class="img-group">
                 <img src="perceive.svg">
                 <img src="perceive.jpg">
             </div>
-            <div class="label"><strong>"Perceive" | Ощущай</strong></div>
-
-            <p>Инсталляция представлена трех метровой конструкции в виде куба. Уголки из нержавеющей стали покрыты специальной светоотражающей краской.
-                Отдельный источник света делает акцент на рамках, которые никак не ограничивают воздух внутри арт-объекта. Данная работа служит напоминанием, что мы по своей сути всегда свободны, а ограничения условны.
+            <audio class="audio" src="./audio/treck1.mp3" controls></audio>
+            <p>
+                Инсталляция "Perceive" представлена трех-метровой конструкцией в виде куба. Уголки из нержавеющей стали, покрытые специальной светоотражающей краской.
+                Отдельный источник света делает акцент на рамках, которые никак не ограничивают воздух внутри арт-объекта. Данная работа служит напоминанием, что <strong>мы по своей сути всегда свободны, а ограничения условны</strong>.
             </p>
         </div>
-        <div class="block">
+        <div class="block scroll-snap">
             <h2>Коллекция</h2>
+            <div class="img-group">
+                <img src="baby.png">
+                <img src="dino.svg" class="dino">
+            </div>
+            <p>
+                В раннем детстве я был восхищен динозаврами. Все виды смотрелись целостно, но при этом каждый обладал уникальными качествами. <strong>Все в природе уникально, но при это является неотъемлемой частью целого</strong>. Это простое явление я захотел выразить в коллекции картин.
+            </p>
             <div class="collection">
                 <img src="pictures/1.svg">
                 <img src="pictures/2.svg">
@@ -44,15 +50,14 @@
                 <img src="pictures/12.svg">
                 <img src="pictures/13.svg">
                 <img src="pictures/14.svg">
+                <img src="pictures/15.svg">
             </div>
-            <div class="label"><strong>14 pictures</strong></div>
-            <p>В раннем детстве я был восхищен динозаврами. Я не понимал какова причина этого восхищения. Все виды смотрелись целостно, но при этом каждый обладал уникальными качествами, оптимальными для эффективного выживания в своей среде.
-            </p>
-            <img src="dino.svg">
-            <p>Как и с динозаврами, каждая картина из коллекции самодостаточна, но только при рассмотрении их как целого, можно увидеть систему. В данных работах я постарался максимально передать это чувство неотделимости всего индивидуального от целого.</p>
         </div>
-        <div class="block">
+        <div class="block footer scroll-snap">
             <p>По всем вопросам и предложениям обращайтесь по электронной почте <strong>sashakosyak@yahoo.com</strong></p>
+        </div>
+        <div class="wr-top">
+            <div class="top"><img src="top.svg"></div>
         </div>
     </main>
 </div>
@@ -62,19 +67,6 @@
     </div>
     <div class="picture">Извините, фото картин появятся позже.</div>
 </div>
-<script>
-  const collection = document.querySelector('.collection')
-  const popup = document.querySelector('.popup')
-  const close = document.querySelector('.close')
-
-
-  collection.onclick = () => {
-    popup.classList.add('popup__show')
-  }
-  close.onclick = () => {
-    popup.classList.remove('popup__show')
-  }
-
-</script>
+<script src="index.js"></script>
 </body>
 </html>

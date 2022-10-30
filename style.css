@@ -15,7 +15,7 @@
     --s: 30px;
     --m: 50px;
     --l: 80px;
-    --black: #222;
+    --black: #111;
 }
 a {
     text-decoration: none;
@@ -32,6 +32,10 @@ a {
     scroll-snap-type: y proximity;
     height: 100vh;
     position: relative;
+}
+.scroll-snap {
+    scroll-snap-align: start;
+    scroll-margin-top: var(--s);
 }
 main {
     font-size: var(--fs-s);
@@ -69,7 +73,7 @@ h2 {
     letter-spacing: -.02em;
 }
 p {
-    margin: var(--m) 0;
+    margin: var(--m) 0 var(--m) 0;
 }
 .label {
     text-align: right;
@@ -78,19 +82,29 @@ p {
     margin-bottom: var(--l);
 }
 .logo {
-    margin-top: var(--l);
+    margin-top: var(--m);
     padding-bottom: var(--s);
-    display: flex;
-    align-items: center;
 }
-.logo2 {
-    width: 28px;
-    margin-right: 13px;
+
+.logo img {
+    width: 40px;
+    margin-right: 10px;
 }
 .logo > strong {
     font-size: var(--fs-m);
     letter-spacing: -0.02em;
     font-weight: 700;
+}
+.audio {
+    width: 100%;
+}
+audio::-webkit-media-controls-enclosure {
+    background-color: transparent;
+    border-radius: 0;
+}
+
+.footer {
+    border-top: 1px solid var(--black);
 }
 .collection {
     display: grid;
@@ -136,8 +150,9 @@ nav {
     width: 100vw;
     height: 100vh;
     background-color: white;
-    padding: var(--s);
+    padding: var(--xs);
     display: none;
+    flex-direction: column;
 }
 .topBar {
     display: flex;
@@ -145,7 +160,6 @@ nav {
 .close {
     margin-left: auto;
     padding: var(--xs);
-    margin-right: var(--xs);
     box-sizing: border-box;
     cursor: pointer;
 }
@@ -158,8 +172,22 @@ nav {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding-bottom: 180px;
+    flex: 1;
+}
+.dino {
+    width: 300px;
 }
 .popup__show {
-    display: block;
+    display: flex;
+}
+.wr-top {
+    display: flex;
+    justify-content: flex-end;
+}
+.top {
+    cursor: pointer;
+    padding: 5px 0;
+}
+.top img {
+    width: 100px;
 }
