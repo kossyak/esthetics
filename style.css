@@ -38,6 +38,9 @@ a {
     scroll-snap-align: start;
     scroll-margin-top: var(--s);
 }
+.scroll-start {
+    scroll-snap-align: start;
+}
 main {
     font-size: var(--fs-s);
     font-weight: 300;
