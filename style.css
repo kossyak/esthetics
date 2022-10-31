@@ -44,7 +44,7 @@ a {
 main {
     font-size: var(--fs-s);
     font-weight: 300;
-    padding: var(--s) 0 var(--l) 0;
+    padding-bottom: var(--l);
     margin: 0 auto;
     max-width: 600px;
 }
@@ -86,7 +86,7 @@ p {
     margin-bottom: var(--l);
 }
 .logo {
-    margin-top: var(--m);
+    padding-top: var(--l);
     padding-bottom: var(--s);
 }
 
